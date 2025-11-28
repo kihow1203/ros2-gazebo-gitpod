@@ -1,1 +1,13 @@
+image:
+  file: Dockerfile
 
+ports:
+  - port: 6080
+    onOpen: open-preview
+    visibility: public
+
+tasks:
+  - name: Start GUI
+    command: |
+      chmod +x start.sh
+      ./start.sh
